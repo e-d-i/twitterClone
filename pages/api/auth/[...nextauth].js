@@ -15,6 +15,7 @@ export default NextAuth({
       session.user.tag = session.user.name.split(" ").join("").toLocaleLowerCase()
       session.user.uid = token.sub
       return session
-    }
-  }
+    },
+  },
+  secret:process.env.NEXTAUTH_SECRET
 })
